@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Publictopia</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="white">
+        <meta name="apple-mobile-web-app-title" content="PublicTopia">
+        <!-- Font awesome -->
+        <script src="https://kit.fontawesome.com/b32ff8a336.js" crossorigin="anonymous"></script>
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet"> 
+        <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+        
+        
+    </head>
+    <div class="landscape-error">
+        <h1 style="color:white; font-size: 103;">Turn to portrait</h1>
+    </div>
+<body>
+
+
+
+    <main>
+        <!-- LOG IN HTML SCREEN STARTS -->
+        <section class="Screen" id="log-in-screen">
+            <div class="close-button">
+                <button id="close-button"><i class="fas fa-times fa-2x"></i></button>
+            </div>
+            <div class="screen-heading">
+                <h2>Welcome to</h2>
+                <h1>PublicTopia</h1>               
+            </div>
+            <div class="log-in-card">
+                
+                
+                <div class="label_and_input">
+                    <label for="public_grow_id"><h5>Grow Id</h5></label>
+                    <input type="text" id="public_grow_id" placeholder="Your Grow Id...">
+                </div>
+                <div class="label_and_input">
+                    <label for="public-pass"><h5>PublicTopia code</h5></label>
+                    <input type="password" id="public-pass" placeholder="Your PublicTopia code...">
+                </div>
+
+            </div>
+            <div class="buy-button">
+                <button onclick="showProfileScreen();"><span><h4>Log in</h4></span></button>
+            </div>
+
+        </section>
+
+        <!-- PROFILE SCREEN HTML STARTS -->
+        <section class="Screen" id="profile-screen">
+            <div class="close-button">
+                <button id="close-button" onclick="showlogInScreen();"><i class="fas fa-times fa-2x"></i></button>
+            </div>
+            <div class="screen-heading">
+                <h2>Profile of</h2>
+                <h1>GlassOfWater</h1>
+            </div>
+            <div class="info-cards">
+                <div class="info-card">
+                    <div class="info-card-header">
+                        <h1>Since:</h1>
+                    </div>
+                    <div class="info-card-data">
+                        <h3>24/01/2020</h3>
+                    </div>        
+                </div>
+                <div class="info-card-with-button">
+                    <div class="card-2-header">
+                        <h1>Links:</h1>
+                    </div>    
+                    <div class="card-2-data">
+                        <h3>1/5</h3>
+                    </div>
+                    <button class="card-2-button" onclick="console.log('hey');"><i class="fas fa-question fa-2x"></i></button>
+                </div>
+                <div class="info-card-with-button">
+                    <div class="card-2-header">
+                        <h1>Strikes:</h1>
+                    </div>    
+                    <div class="card-2-data">
+                        <h3>1/3</h3>
+                    </div>                      
+                        <button class="card-2-button"><i class="fas fa-question fa-2x"></i></button>
+                </div>
+            </div>
+            <div class="buy-button">
+                <button><span><h4>Buy link</h4></span></button>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src='main.js'></script>
+</body>
+</html>
