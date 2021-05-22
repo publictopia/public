@@ -33,15 +33,21 @@
                 
             </div>
             <div class="screen-heading">
-                <h2>Welcome to</h2>
-                <h1>PublicTopia</h1>               
+                <div>
+                    <h2>Welcome to</h2>
+                    <h1>PublicTopia</h1>  
+                </div>
+                
+                <div id="log-out">
+                 <button onclick="logOut();" style="background-color: white;"><span><h6 id="log-out-button">Log Out</h6></span></button>
+                </div>
+             
             </div>
             <div class="log-in-card">
                 
-                
                 <div class="label_and_input">
-                    <label for="public_grow_id"><h5>Grow Id</h5></label>
-                    <input type="text" id="public_grow_id" placeholder="Your Grow Id...">
+                    <div id="feedback-header-div"><label for="public-grow-id"><h5>Grow Id &nbsp&nbsp</h5></label><h5 id="feedback"></h5></div>
+                    <input type="text" id="public-grow-id" placeholder="Your Grow Id...">
                 </div>
                 <div class="label_and_input">
                     <label for="public-pass"><h5>PublicTopia code</h5></label>
@@ -50,7 +56,7 @@
 
             </div>
             <div class="buy-button">
-                <button onclick="showProfileScreen();"><span><h4>Log in</h4></span></button>
+                <button onclick="logIn();"><span><h4>Log in</h4></span></button>
             </div>
 
         </section>
@@ -61,8 +67,10 @@
                 <button id="close-button" onclick="showlogInScreen();"><i class="fas fa-times fa-2x"></i></button>
             </div>
             <div class="screen-heading">
-                <h2>Profile of</h2>
-                <h1>GlassOfWater</h1>
+                <div>
+                    <h2>Profile of</h2>
+                    <h1>GlassOfWater</h1>
+                </div>
             </div>
             <div class="info-cards">
                 <div class="info-card">
