@@ -160,6 +160,11 @@ display: flex;
 }
 #feedback{
     color:rgba(255, 0, 0, 0.678);
+    max-width: 250px;
+    max-height: 2.5rem;
+    white-space: wrap;
+    overflow: hidden;
+    
 }
 .log-in-card{
     display: flex;
