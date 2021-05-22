@@ -40,27 +40,23 @@ async function logOut(){
 
 async function logIn(){
 
-
-     let { data, error} = await supabase.auth.signIn(
-       {
-           email: growIdHTML.value,
-           password: publicCodeHTML.value,
-       }
-    );
-    if(error != null){
-        console.log(error.message);
-        feedbackHTML.innerHTML = error.message; 
+    if(growIdHTML.value.length > 3 && publicCodeHTML.value.length > 3){
+        let { data, error} = await supabase.auth.signIn(
+        {
+            email: growIdHTML.value,
+            password: publicCodeHTML.value,
+        }
+        );
+        if(error != null){
+            console.log(error.message);
+            feedbackHTML.innerHTML = error.message; 
+        }
+        else{
+            logOutButtonHTML.style.color = "rgba(255, 0, 0, 0.678)"
+            showProfileScreen();
+            feedbackHTML.innerHTML="";
+        }
     }
-    else{
-        logOutButtonHTML.style.color = "rgba(255, 0, 0, 0.678)"
-        showProfileScreen();
-    }
-
-    console.log( await supabase
-        .from('Worlds2')
-        .select('World_name')
-    );
-    console.log(supabase.auth.user()); 
 }
 
 
