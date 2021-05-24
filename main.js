@@ -34,6 +34,7 @@ async function logOut(){
         logOutButtonHTML.style.color = "#EFEFEF";
         growIdHTML.value = "";
         publicCodeHTML.value = "";
+        feedbackHTML.innerHTML = "";
     }
 }
 
@@ -56,6 +57,9 @@ async function logIn(){
             showProfileScreen();
             feedbackHTML.innerHTML="";
         }
+    }
+    else{
+        feedbackHTML.innerHTML = "Grow Id or Public code missing";
     }
 }
 
