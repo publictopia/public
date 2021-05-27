@@ -9,8 +9,8 @@ growIdHTML = document.getElementById("public-grow-id");
 publicCodeHTML = document.getElementById("public-pass");
 
 //defalut values for testing
-growIdHTML.value = "public@email.com";
-publicCodeHTML.value = "12345678";
+/* growIdHTML.value = "public@email.com";
+publicCodeHTML.value = "12345678"; */
 
 //showProfileScreen();
 function showProfileScreen(){
@@ -37,8 +37,13 @@ async function logOut(){
         feedbackHTML.innerHTML = "";
     }
 }
-
-
+/* supabase.auth.signUp(
+    {
+        email: "test@email.com",
+        password: "12345678",
+    }
+);
+ */
 async function logIn(){
 
     if(growIdHTML.value.length > 3 && publicCodeHTML.value.length > 3){
