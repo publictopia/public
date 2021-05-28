@@ -27,13 +27,27 @@
 
 
     <main>
+        <!-- ADMIN or OTHER SCREEn -->
+        <section class="Screen" id="choose-role-page">
+            <div class="screen-heading search-heading">
+                <h2>Welcome to</h2>
+                <h1>PublicTopia</h1>  
+            </div>
+            <div class="admin-other-buttons">
+                <button  onclick="showlogInScreen();"><span><h4>Admin</h4></span></button>
+                <button  class="other-button" onclick="showSearchScreen();"><span><h4>Other</h4></span></button>
+            </div>
+        </section>
         <!-- LOG IN HTML SCREEN STARTS -->
         <section class="Screen" id="log-in-screen">
             <div class="close-button">
+                <button id="close-button" onclick="showRoleScreen();"><i class="fas fa-times fa-2x"></i></button>
+            </div>
+            <div class="close-button">
                 
             </div>
-            <div class="screen-heading">
-                <div>
+          
+                <div class="screen-heading">
                     <h2>Welcome to</h2>
                     <h1>PublicTopia</h1>  
                 </div>
@@ -42,7 +56,7 @@
                  <button onclick="logOut();" style="background-color: white;"><span><h6 id="log-out-button">Log Out</h6></span></button>
                 </div>
              
-            </div>
+            
             
                 <form class="log-in-card">    
                     <div class="label_and_input">
@@ -105,8 +119,12 @@
         </section>
         <!-- SEARCH SCREEN -->
         <section class="Screen" id="search-screen">
+            <div class="screen-heading search-heading">
+                <h2>Welcome to</h2>
+                <h1>PublicTopia</h1>  
+            </div>
             <div class="close-button">
-                <button id="close-button" onclick="showlogInScreen();"><i class="fas fa-times fa-2x"></i></button>
+                <button id="close-button" onclick="showRoleScreen();"><i class="fas fa-times fa-2x"></i></button>
             </div>
 
 

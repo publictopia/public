@@ -10,6 +10,9 @@ growIdHTML = document.getElementById("public-grow-id");
 publicCodeHTML = document.getElementById("public-pass");
 searchGrowIdHTML = document.getElementById("SearchGrowId");
 searchResults = document.getElementById("search-results");
+chooseRolePageHTML = document.getElementById("choose-role-page");
+otherButton = document.getElementById("other-button");
+searchScreenHTML = document.getElementById("search-screen");
 
 //defalut values for testing
 /* growIdHTML.value = "public@email.com";
@@ -18,16 +21,25 @@ publicCodeHTML.value = "12345678"; */
 
 profileScreenHTML.style.display = "none";
 logInScreenHTML.style.display = "none";
+searchScreenHTML.style.display ="none";
 //showProfileScreen();
 function showProfileScreen(){
     logInScreenHTML.style.display = "none";
     profileScreenHTML.style.display = "flex"
 }
-
-
+function showSearchScreen(){
+    searchScreenHTML.style.display = "flex";
+    chooseRolePageHTML.style.display ="none";
+}
+function showRoleScreen(){
+    chooseRolePageHTML.style.display ="flex";
+    logInScreenHTML.style.display = "none";
+    searchScreenHTML.style.display = "none";
+}
 function showlogInScreen(){
     logInScreenHTML.style.display = "flex";
     profileScreenHTML.style.display = "none";
+    chooseRolePageHTML.style.display ="none";
 }
 
 async function logOut(){
