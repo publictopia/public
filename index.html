@@ -103,6 +103,26 @@
                 <button><span><h4>Buy link</h4></span></button>
             </div>
         </section>
+        <!-- SEARCH SCREEN -->
+        <section class="Screen" id="search-screen">
+            <div class="close-button">
+                <button id="close-button" onclick="showlogInScreen();"><i class="fas fa-times fa-2x"></i></button>
+            </div>
+
+
+            <form class="label_and_input" id="search-box">
+                <label for="public-pass"><h5>Search by Grow ID</h5></label>
+                <input  type="text" id="SearchGrowId" oninput="Search();" autocomplete="off" placeholder="Search..."  >
+            </form>
+            <div class="search-results" id="search-results">
+      
+                <div class="search-result">
+                   <h1>Tester</h1><button class="search-profile-button"><h4><i class="fas fa-arrow-right"></i></h4></button>
+                </div>
+                
+            </div>
+
+        </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <script src='main.js'></script>
