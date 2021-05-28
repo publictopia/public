@@ -91,10 +91,12 @@ button:hover span {
     background-color: var(--sub2-color);
 }
 .close-button{
-    position: absolute;
+    display: flex;
     justify-content: flex-end;
-    right: 2rem;
-    top: 2rem;
+    position: sticky;
+    justify-content: flex-end;
+    margin-right: 2rem;
+    
     
 }
 #close-button{
