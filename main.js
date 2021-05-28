@@ -15,6 +15,7 @@ searchResults = document.getElementById("search-results");
 /* growIdHTML.value = "public@email.com";
 publicCodeHTML.value = "12345678"; */
 
+
 profileScreenHTML.style.display = "none";
 logInScreenHTML.style.display = "none";
 //showProfileScreen();
