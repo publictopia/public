@@ -31,6 +31,7 @@ function showProfileScreen(){
 function showSearchScreen(){
     searchScreenHTML.style.display = "flex";
     chooseRolePageHTML.style.display ="none";
+    historyScreenHTML.style.display = "none";
 }
 function showRoleScreen(){
     chooseRolePageHTML.style.display ="flex";
