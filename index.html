@@ -40,21 +40,15 @@
         </section>
         <!-- LOG IN HTML SCREEN STARTS -->
         <section class="Screen" id="log-in-screen">
-            <div class="close-button">
-                <button id="close-button" onclick="showRoleScreen();"><i class="fas fa-times fa-2x"></i></button>
-            </div>
-            <div class="close-button">
-                
-            </div>
-          
-                <div class="screen-heading">
-                    <h2>Welcome to</h2>
-                    <h1>PublicTopia</h1>  
+
+              <div id="log-out">
+                <button onclick="logOut();" style="background-color: white;"><h6 id="log-out-button">Log Out</h6></button>
+               </div>
+                <div class="close-button" >
+                    <button id="close-button" onclick="showRoleScreen();"><i class="fas fa-times fa-2x"></i></button>
                 </div>
                 
-                <div id="log-out">
-                 <button onclick="logOut();" style="background-color: white;"><span><h6 id="log-out-button">Log Out</h6></span></button>
-                </div>
+                
              
             
             
@@ -76,7 +70,7 @@
 
         <!-- PROFILE SCREEN HTML STARTS -->
         <section class="Screen" id="profile-screen">
-            <div class="close-button">
+            <div class="close-button" >
                 <button id="close-button" onclick="showlogInScreen();"><i class="fas fa-times fa-2x"></i></button>
             </div>
             <div class="screen-heading">
@@ -140,6 +134,53 @@
                 
             </div> -->
 
+        </section>
+        <!-- HISTORY SCREEN -->
+        <section class="Screen" id="history-screen" style="display: flex; ">
+            <div class="close-button">
+                <button id="close-button" onclick=""><i class="fas fa-times fa-2x"></i></button>
+            </div>
+            <div class="screen-heading search-heading" >
+                <h2>History of</h2>
+                <h1>Airglass</h1>  
+            </div>
+            <div style=" background-color: white; flex: 0 0 auto;  min-height: 8rem; border-radius: 2rem;">
+                <form class="label_and_input" id="search-box" style="margin-top: 8rem;">
+                    <label for="public-pass"><h5>Search by World name, date</h5></label>
+                    <input  type="text" id="SearchGrowId" oninput="Search();" autocomplete="off" placeholder="Search..."  >
+                </form>
+            </div>
+            <div class="full-history-div" >
+                <div class="history1-div">
+                    <h3 class="history-card-bottom">04.06.2021 10:08 by AirOfglass</h3>
+                    <h3 class="history-h3">link from (Public+)</h3>
+                    <h1>Greenwallpaper</h1>
+                    <h3 class="history-h3">to</h3>
+                    <h1>Rimi</h1>
+                    <div class="expiring">
+                     <h3 class="history-h3">Expiring in</h3>
+                     <div class="active">
+                        <h4 >2 days</h4>
+                     </div>
+                    </div>
+                </div>
+                <div class="1history-div" style="background-color: #EFEFEF; border-radius: 1rem; padding: 1rem; margin: 2rem;  position: relative;">
+                    <h3 style="font-size: 0.8rem; position: absolute; bottom:-1.2rem">04.06.2021 10:20 by AirOfglass</h3>
+                    <h3 style="font-size: 1rem;">link from (Public+)</h3>
+                    <h1>Purplewallpaper</h1>
+                    <h3 style="font-size: 1rem;">to</h3>
+                    <h1>Rimi</h1>
+                    <div class="expiring" style="display: flex; justify-content: space-between; align-items: center;">
+                     <h3 style="font-size: 1rem;">Expiring in</h3>
+                     <div class="expiring-date" style="background-color: rgb(219, 219, 219); padding: 0.5rem; border-radius: 0.5rem;">
+                        <h4 style="font-size: 1.5rem;">Expired</h4>
+                     </div>
+                    </div>
+                </div>
+ 
+                
+                
+            </div>
         </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>

@@ -13,15 +13,16 @@ searchResults = document.getElementById("search-results");
 chooseRolePageHTML = document.getElementById("choose-role-page");
 otherButton = document.getElementById("other-button");
 searchScreenHTML = document.getElementById("search-screen");
-
+historyScreenHTML = document.getElementById("history-screen");
 //defalut values for testing
 /* growIdHTML.value = "public@email.com";
 publicCodeHTML.value = "12345678"; */
 
-
+historyScreenHTML.style.display = "none";
 profileScreenHTML.style.display = "none";
 logInScreenHTML.style.display = "none";
-searchScreenHTML.style.display ="none";
+searchScreenHTML.style.display ="flex";
+chooseRolePageHTML.style.display ="none";
 //showProfileScreen();
 function showProfileScreen(){
     logInScreenHTML.style.display = "none";
@@ -42,6 +43,10 @@ function showlogInScreen(){
     chooseRolePageHTML.style.display ="none";
 }
 
+function ShowHistory(){
+    searchScreenHTML.style.display = "none";
+    historyScreenHTML.style.display = "flex";
+}
 async function logOut(){
     let { error } = await supabase.auth.signOut();
     if(error != null){
@@ -57,7 +62,7 @@ async function logOut(){
 }
 /* supabase.auth.signUp(
     {
-        email: "arsglass@gmail.com",
+        email: "airglass2@gmail.com",
         password: "testing2@",
     }
 ); */
@@ -106,6 +111,7 @@ async function Search(){
         console.log(error);
         searchResults.innerHTML = "";
         Name.forEach(element => createSearchResult(element.Name));
+        
     }
 }
 
@@ -119,6 +125,9 @@ function createSearchResult(GrowID){
     var searchResultButton = document.createElement("button");
     var ButtonIconContainer = document.createElement("h4");
     var ButtonIcon = document.createElement("i");
+    searchResultButton.onclick = function(){
+        ShowHistory(); return false;
+    }
 
     ButtonIcon.classList.add("fas");
     ButtonIcon.classList.add("fa-arrow-right");
